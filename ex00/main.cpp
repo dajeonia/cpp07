@@ -3,8 +3,8 @@
 
 int	main(void)
 {
-	std::string a("dajeon");
-	std::string b("hahseo");
+	std::string a("chicken");
+	std::string b("hamburger");
 
 	std::cout << "ORIGINAL =========================================" << std::endl;
 	std::cout << "a: " << a << std::endl;
