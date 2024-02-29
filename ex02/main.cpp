@@ -46,7 +46,7 @@ int	main(void)
 	std::cout << "arr3.size(): " << arr3.size() << std::endl;
 	std::cout << "arr4.size(): " << arr4.size() << std::endl;
 
-	std::cout << "\033[32m" << "= arr4(7) = arr1(5): out of range error =====================" << "\033[0m" << std::endl;
+	std::cout << "\033[31m" << "= arr4(7) = arr1(5), exception: range error =====================" << "\033[0m" << std::endl;
 	try {
 		arr4 = arr1;
 		std::cout << "OK: not error" << std::endl;
@@ -67,7 +67,7 @@ int	main(void)
 	for (int i=0; i!=sz; ++i)
 		std::cout << "arr3[" << i << "]: " << arr3[i] << std::endl;
 
-	std::cout << "\033[32m" << "= arr3[5] out of range error =====================" << "\033[0m" << std::endl;
+	std::cout << "\033[31m" << "= arr3[5], exception: out of range =====================" << "\033[0m" << std::endl;
 	try {
 		std::cout << arr3[sz] << std::endl;
 		std::cout << "OK: not error" << std::endl;
