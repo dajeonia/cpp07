@@ -7,7 +7,7 @@ typedef unsigned long size_t;
 template<typename T>
 class Array {
 	T* arr;
-	size_t sz;
+	const size_t sz;
 public:
 	Array() : arr(new T[0]), sz(0) { }
 	Array(unsigned int n) : arr(new T[n]), sz(n) { }
@@ -18,10 +18,11 @@ public:
 	}
 	Array& operator=(const Array& a)
 	{
+		if (sz != a.sz)
+			throw (std::range_error("Array"));
 		T* tmp = new T[a.sz];
 		delete[] arr;
 		arr = tmp;
-		sz = a.sz;
 		for (size_t i=0; i!=sz; ++i)
 			arr[i] = a.arr[i];
 		return (*this);

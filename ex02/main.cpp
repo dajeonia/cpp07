@@ -41,8 +41,19 @@ int	main(void)
 		std::cout << "arr2[" << i << "]: " << arr2[i] << std::endl;
 
 	std::cout << "\033[32m" << "= copy assignment operator =======================" << "\033[0m" << std::endl;
-	Array<int> arr3(7);
+	Array<int> arr3(5);
+	Array<int> arr4(7);
 	std::cout << "arr3.size(): " << arr3.size() << std::endl;
+	std::cout << "arr4.size(): " << arr4.size() << std::endl;
+
+	std::cout << "\033[32m" << "= arr4(7) = arr1(5): out of range error =====================" << "\033[0m" << std::endl;
+	try {
+		arr4 = arr1;
+		std::cout << "OK: not error" << std::endl;
+	} // std::range_error
+	catch (std::exception& e) {
+		std::cout << "Error: std::range_error(" << e.what() << ")" << std::endl;
+	}
 	std::cout << "- arr3 = arr1; -----------------------------------" << std::endl;
 	arr3 = arr1;
 	std::cout << "- arr3: copied well? -----------------------------" << std::endl;
