@@ -2,11 +2,11 @@
 # define WHATEVER_HPP
 
 template<typename T>
-void	swap(T a, T b)
+void	swap(T& a, T& b)
 {
 	T tmp(a);
-	b = a;
-	a = tmp;
+	a = b;
+	b = tmp;
 }
 
 template<typename T>

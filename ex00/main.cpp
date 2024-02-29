@@ -5,16 +5,22 @@ int	main(void)
 {
 	std::string a("chicken");
 	std::string b("hamburger");
+	int c(3);
+	int d(152);
 
 	std::cout << "ORIGINAL =========================================" << std::endl;
 	std::cout << "a: " << a << std::endl;
 	std::cout << "b: " << b << std::endl;
+	std::cout << "c: " << c << std::endl;
+	std::cout << "d: " << d << std::endl;
 	std::cout << std::endl;
 
 	std::cout << "SWAPPED ==========================================" << std::endl;
 	swap(a, b);
 	std::cout << "a: " << a << std::endl;
 	std::cout << "b: " << b << std::endl;
+	std::cout << "c: " << c << std::endl;
+	std::cout << "d: " << d << std::endl;
 	std::cout << std::endl;
 
 	std::cout << "WHICH IS MIN ? ===================================" << std::endl;
